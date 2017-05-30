@@ -1,9 +1,24 @@
-# frontline-coding-demo
-Source control for Frontline coding challenge project
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-#### Table of Contents
-Insert after conversion
-
+- [Objective](#)
+- [Requirements and Assumptions](#)
+	- [Requirements](#)
+	- [Assumptions](#)
+- [Implementation](#)
+	- [First Iteration](#)
+	- [Second Iteration](#)
+- [Testing](#)
+	- [Considerations](#)
+	- [Running the tests](#)
+- [Using the Application](#)
+	- [Starting the Application](#)
+	- [Making a Request](#)
+			- [The base URL is](#)
+			- [The input parameters and their valid values are as follows:](#)
+			- [Sample requests](#)
+- [Future Considerations](#)
+	- [Final Thoughts](#)
+     
 ---
 # Objective
 The objective of the coding challenge seemed simple at first. Split up a string and print it line by line, throw in a couple dashes and it's done. But to really achieve what the instructions asked for, a production-caliber solution, I had to re-think things a little. I set out to create a simple, easy-to-use web service that would convert the input string and display the results in an appealing way. I wanted to capture some of my various skills as well as my attention to detail and consideration for completeness.
