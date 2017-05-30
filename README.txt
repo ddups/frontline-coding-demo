@@ -113,7 +113,7 @@ V.   Using the Application
   
   B.  Making a Request
     1. The base URL is 
-    	- http://localhost:8080/conversion?
+    	- http://localhost:8080/conversion
     2. The input parameters and their valid values are as follows:
         - sortOrder | valid values = "alpha", "input"
             (required = false, defaultValue = "alpha")
@@ -125,7 +125,7 @@ V.   Using the Application
         - http://localhost:8080/conversion?sortOrder=input&inputString=(id,created,employee(id,firstname,employeeType(id),lastname),location)
         
 --------------------------------------
-V. Future Work
+V. Future Considerations
 --------------------------------------
   A.  Potential enhancements
     While I was working on the solution, a couple things came to mind that I thought would be cool but not necessarily 
