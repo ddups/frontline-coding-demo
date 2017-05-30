@@ -48,7 +48,7 @@ Of these, the most considerable were #2 and #3. There was a strong focus on havi
 As previously stated, my objective was to create an easy-to-use web service with a self-contained application server.
 This solution uses Spring Boot to minimize configuration and includes a Tomcat embedded container to make it simple to
 run. The application is a RESTful service and can be queried from an internet browser. The request parameters are
-included in section IV.
+included in the [Making a Request](#making-a-request) section.
 
 ## First Iteration
 I tried to approach the problem from an Agile perspective. Initially I wanted to come up with the minimum solution
