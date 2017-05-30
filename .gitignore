@@ -1,32 +1,4 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-# Eclipse - Launch configs, metadata, etc.
-frontline-demo/*.launch
-frontline-demo/.classpath
-frontline-demo/.project
-frontline-demo/.metadata
-frontline-demo/.loadpath
-frontline-demo/.settings
-frontline-demo/target/*
-frontline-demo/.settings
+.classpath
+.project
+.settings
+target/
