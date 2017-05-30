@@ -1,19 +1,21 @@
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**Table of Contents**
 
 - [Objective](#objective)
-- [Requirements and Assumptions](#)
-	- [Requirements](#)
-	- [Assumptions](#)
-- [Implementation](#)
-	- [First Iteration](#)
-	- [Second Iteration](#)
-- [Testing](#)
-	- [Considerations](#)
-	- [Running the tests](#)
-- [Using the Application](#)
-	- [Starting the Application](#)
-	- [Making a Request](#)
-- [Final Thoughts](#)
+- [Requirements and Assumptions](#requirements-and-assumptions)
+	- [Requirements](#requirements)
+	- [Assumptions](#assumptions)
+- [Implementation](#implementation)
+	- [First Iteration](#first-iteration)
+	- [Second Iteration](#second-iteration)
+- [Testing](#testing)
+	- [Considerations](#considerations)
+	- [Running the tests](#running-the-tests)
+- [Using the Application](#using-the-application)
+	- [Starting the Application](#starting-the-application)
+	- [Making a Request](#making-a-request)
+- [Future Considerations](#future-considerations)
+	- [Potential Enhancements](#potential-enhancements)
+	- [Final Thoughts](#final-thoughts)
 
 ---
 # Objective
@@ -112,7 +114,7 @@ To run with java on the command line:
 
 ---
 # Future Considerations
-##Potential enhancements
+## Potential enhancements
 While I was working on the solution, a couple things came to mind that I thought would be cool but not necessarily 
 needed for the final implementation.
 1) Allow multiple sub-records for a single record
