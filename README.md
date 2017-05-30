@@ -75,6 +75,44 @@ To run the tests in Eclipse:
 
 ---
 # Using the Application
+## Starting the Application
+The application is build with an embedded Tomcat container which makes it very easy to run.
+To run the application in Eclipse:  
+1) Right click on the "FrontlineDemoApplication.java" class
+2) Click "Run As -> Java Application"
+
+To run with java on the command line:  
+`- java -jar target/dupuis-coding-challenge.jar`
+
+## Making a Request
+#### The base URL is 
+- http://localhost:8080/conversion
+
+#### The input parameters and their valid values are as follows:
+  - sortOrder | valid values = "alpha", "input"  
+  (required = false, defaultValue = "alpha")
+  - inputString  
+  (required = false, defaultValue = \<original example input string\>)
+
+#### Sample requests
+  - http://localhost:8080/conversion
+  - http://localhost:8080/conversion?sortOrder=input
+  - http://localhost:8080/conversion?sortOrder=input&inputString=(id,created,employee(id,firstname,employeeType(id),lastname),location)
 
 ---
 # Future Considerations
+##Potential enhancements
+While I was working on the solution, a couple things came to mind that I thought would be cool but not necessarily 
+needed for the final implementation.
+1) Allow multiple sub-records for a single record
+2) Include more custom sorts (ascending, descending, etc.)
+  
+## Final Thoughts
+Overall I found this challenge to be more involved than at first glance. It was a great chance to get creative and
+develop a robust solution. I enjoyed working on this application and I am proud of the result. I am looking forward 
+to hearing feedback and hopefully taking the next steps in the application process.
+
+Thank you for your consideration.
+    
+Derek Dupuis
+05/30/2017
