@@ -36,7 +36,7 @@ public class InputConverter {
      */
     public ArrayList<String> convertInput(String inputString) throws InvalidInputException {
         // clean up the input string to fix small issues with syntax
-        inputString = inputString.toLowerCase().replaceAll("\\s", "");
+        inputString = inputString.replaceAll("\\s", "");
         
         if (!validInput(inputString))
             throw new InvalidInputException();
@@ -106,7 +106,7 @@ public class InputConverter {
      */
     public Record convertInputAlpha(String inputString) throws InvalidInputException {
         // clean up the input string to fix small issues with syntax
-        inputString = inputString.toLowerCase().replaceAll("\\s", "");
+        inputString = inputString.replaceAll("\\s", "");
 
         if (!validInput(inputString))
             throw new InvalidInputException();
@@ -123,10 +123,10 @@ public class InputConverter {
         // which contains all the strings that need to be printed.
         while (topRecord == null) {
             bldr = new StringBuilder();
-            rightParenIdx = inputString.indexOf(')');
-            leftParenIdx = inputString.lastIndexOf('(');
 
             // get children (values between parentheses)
+            rightParenIdx = inputString.indexOf(')');
+            leftParenIdx = inputString.lastIndexOf('(');
             String children = inputString.substring(leftParenIdx + 1, rightParenIdx);
 
             // now read the name of the record (value before parentheses),
@@ -188,7 +188,10 @@ public class InputConverter {
     }
 
     /**
-     * Helper method to check for matching sets of parentheses
+     * Helper method to check for matching sets of parentheses. For each '('
+     * found in the string, one is added to the stack. When a ')' is found,
+     * if there is a '(' on the top of the stack, then they are matching.
+     * Otherwise, they are mismatched.
      * 
      * @param inputString
      * @return true if valid, false otherwise

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 
-<link rel="stylesheet" type="text/css" href="/css/frontline.css" />
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
 
 </head>
 <body>
