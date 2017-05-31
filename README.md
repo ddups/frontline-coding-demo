@@ -4,7 +4,7 @@
 - [Requirements and Assumptions](#requirements-and-assumptions)
 	- [Requirements](#requirements)
 	- [Assumptions](#assumptions)
-- [Implementation](#implementation)
+- [Implementation Details](#implementation-details)
 	- [First Iteration](#first-iteration)
 	- [Second Iteration](#second-iteration)
 - [Testing](#testing)
@@ -40,14 +40,14 @@ Of these, the most considerable were #2 and #3. There was a strong focus on havi
 3) Input strings must start and end with '(' and ')' respectively
 4) Input strings may contain any alphanumeric characters, and must contain at least one
 5) Input strings may contain ':' and a subsequent value (e.g. id:1234)...
-> *Note: I added #5 to give the app some semblance of usability*
+> *Note: I added #5 to give the app some added usability*
 
 ---
-# Implementation
+# Implementation Details
 As previously stated, my objective was to create an easy-to-use web service with a self-contained application server. This solution uses Spring Boot to minimize configuration and includes a Tomcat embedded container to make it simple to run. The application is a RESTful service and can be queried from an internet browser. The request parameters are included in the [Making a Request](#making-a-request) section.
 
 ## First Iteration
-I tried to approach the problem from an Agile perspective. Initially I wanted to come up with the minimum solution and build an MVP. Once I could prove out the framework, I would enhance the application to meet the bonus criteria.
+I tried to approach the problem from an Agile perspective so my initial goal was to come up with the minimum solution and build an MVP. Once I could prove out the framework, I would enhance the application to meet the bonus criteria.
 
 The initial solution, included as the "input-order" implementation, is a simple loop over the input string. It evaluates each character, building words as it goes. When it encounters a '(' or ')' it increments/decrements the number of dashes that are prepended to a word. Each word is added to a list in the order in which it is read. Finally the list is printed one by one on the web page and displayed for the user.
      
