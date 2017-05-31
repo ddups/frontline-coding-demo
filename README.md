@@ -15,7 +15,6 @@
 	- [Making a Request](#making-a-request)
 - [Future Considerations](#future-considerations)
 	- [Potential Enhancements](#potential-enhancements)
-	- [Final Thoughts](#final-thoughts)
 
 ---
 # Objective
@@ -45,41 +44,24 @@ Of these, the most considerable were #2 and #3. There was a strong focus on havi
 
 ---
 # Implementation
-As previously stated, my objective was to create an easy-to-use web service with a self-contained application server.
-This solution uses Spring Boot to minimize configuration and includes a Tomcat embedded container to make it simple to
-run. The application is a RESTful service and can be queried from an internet browser. The request parameters are
-included in the [Making a Request](#making-a-request) section.
+As previously stated, my objective was to create an easy-to-use web service with a self-contained application server. This solution uses Spring Boot to minimize configuration and includes a Tomcat embedded container to make it simple to run. The application is a RESTful service and can be queried from an internet browser. The request parameters are included in the [Making a Request](#making-a-request) section.
 
 ## First Iteration
-I tried to approach the problem from an Agile perspective. Initially I wanted to come up with the minimum solution
-and build an MVP. Once I could prove out the framework, I would enhance the application to meet the bonus criteria.
+I tried to approach the problem from an Agile perspective. Initially I wanted to come up with the minimum solution and build an MVP. Once I could prove out the framework, I would enhance the application to meet the bonus criteria.
 
-The initial solution, included as the "input-order" implementation, is a simple loop over the input string. It
-evaluates each character, building words as it goes. When it encounters a '(' or ')' it increments/decrements the
-number of dashes that are prepended to a word. Each word is added to a list in the order in which it is read.
-Finally the list is printed one by one on the web page and displayed for the user.
+The initial solution, included as the "input-order" implementation, is a simple loop over the input string. It evaluates each character, building words as it goes. When it encounters a '(' or ')' it increments/decrements the number of dashes that are prepended to a word. Each word is added to a list in the order in which it is read. Finally the list is printed one by one on the web page and displayed for the user.
      
 ## Second Iteration
-For the bonus portion, I knew a simple loop would not cut it. I needed to build a data structure to capture the
-hierarchy of the input string. I decided on using a recursive strategy to represent the "Records", and utilized a
-TreeMap for storing the values to automatically have things in alphabetical order.
+For the bonus portion, I knew a simple loop would not cut it. I needed to build a data structure to capture the hierarchy of the input string. I decided on using a recursive strategy to represent the "Records", and utilized a TreeMap for storing the values to automatically have things in alphabetical order.
 
-The second solution, which is the default mode of the web service, is a more complicated loop over the input string.
-It begins by finding the inner-most set of parentheses and building a record of the contents. It uses the value
-immediately preceding the parentheses as the name (key) and then removes the parentheses and their contents from the
-string. It repeats this until there is nothing remaining in the input string, then returns a top-level record which 
-maps the entire input string to a hierarchy.
+The second solution, which is the default mode of the web service, is a more complicated loop over the input string. It begins by finding the inner-most set of parentheses and building a record of the contents. It uses the value immediately preceding the parentheses as the name (key) and then removes the parentheses and their contents from the string. It repeats this until there is nothing remaining in the input string, then returns a top-level record which maps the entire input string to a hierarchy.
 
-I also included logging, and additional unit tests as part of the second iteration, as well as completing all
-documentation. Some inspiration was taken from other sources for the CSS, HTML and jsp pages.
+I also included logging, and additional unit tests as part of the second iteration, as well as completing all documentation. Some inspiration was taken from other sources for the CSS, HTML and jsp pages.
 
 ---
 # Testing
 ## Considerations
-I used JUnit to write the unit tests for the application and used a test-driven strategy. I started out with the 
-original example input string, and built up a small test suite to ensure the validation was working properly as I 
-implemented the solution. I tried to capture a wide breadth of test cases across the validation and processing of
-the input, as well as the exception handling.
+I used JUnit to write the unit tests for the application and used a test-driven strategy. I started out with the original example input string, and built up a small test suite to ensure the validation was working properly as I implemented the solution. I tried to capture a breadth of test cases across the validation and processing of the input, as well as the exception handling.
     
 ## Running the tests
 To run the tests in Eclipse:
@@ -111,21 +93,11 @@ To run with java on the command line:
   - http://localhost:8080/conversion
   - http://localhost:8080/conversion?sortOrder=input
   - http://localhost:8080/conversion?sortOrder=input&inputString=(id,created,employee(id,firstname,employeeType(id),lastname),location)
+  - http://localhost:8080/conversion?inputString=(id:1234,created:20170530,employee(id:4444,firstname:Derek,employeeType(id:0),lastname:Dupuis),location:Nashua)
 
 ---
 # Future Considerations
 ## Potential enhancements
-While I was working on the solution, a couple things came to mind that I thought would be cool but not necessarily 
-needed for the final implementation.
+While I was working on the solution, a couple things came to mind that I thought would be cool but not necessarily needed for the final implementation.
 1) Allow multiple sub-records for a single record
-2) Include more custom sorts (ascending, descending, etc.)
-  
-## Final Thoughts
-Overall I found this challenge to be more involved than at first glance. It was a great chance to get creative and
-develop a robust solution. I enjoyed working on this application and I am proud of the result. I am looking forward 
-to hearing feedback and hopefully taking the next steps in the application process.
-
-Thank you for your consideration.
-    
-Derek Dupuis
-05/30/2017
+2) Include more custom sorts (ascending, descending, etc.
