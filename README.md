@@ -77,7 +77,7 @@ To run the application in Eclipse:
 2) Click "Run As -> Java Application"
 
 To run with java on the command line:  
-`- java -jar target/dupuis-coding-challenge.jar`
+`- java -jar target/dupuis-coding-challenge-1.0.jar`
 
 ## Making a Request
 #### The base URL is 
