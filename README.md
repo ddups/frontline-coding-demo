@@ -22,6 +22,8 @@ The objective of the coding challenge seemed simple at first. Split up a string 
 
 I hope this document serves useful while evaluating my application. I have included everything needed to run and use the application and associated tests.
 
+You can find the original challenge requirements in the PDF "FrontlineCodeChallenge_2017" at the top level.
+
 ---
 # Requirements and Assumptions
 ## Requirements
